@@ -10,7 +10,7 @@
                           <Icon type="ios-paper" />
                           内容管理
                       </template>
-                      <MenuItem name="1-1">文章管理</MenuItem>
+                      <MenuItem name="1-1" to="/hello">文章管理</MenuItem>
                       <MenuItem name="1-2">评论管理</MenuItem>
                       <MenuItem name="1-3">举报管理</MenuItem>
                   </Submenu>
@@ -88,8 +88,10 @@
                  </div>
              </Menu>
              <div :style="contentStyleObj1">
-                  <div style="height: 100%;width: 100%;background: #cccccc;padding-left: 20px">
+                  <div style="height: 100%;width: 100%;padding: 5px;overflow-y:auto">
+                          <router-view>
 
+                          </router-view>
                   </div>
              </div>
              <div class="footer" style="height: 40px;width: 100%;background: #fff;text-align: center">
@@ -119,7 +121,7 @@ export default {
             contentStyleObj1:{
                 height:'',
                 width: '100%',
-                background:'red'
+                background:'#ccc'
             }
 
         }
